@@ -21,7 +21,5 @@ def check_number(number):
     # Egyébként páratlan → "odd"
     if(number % 2 == 0):
         return "even"
-    elif(number == 0):
-        return "even"
     else:
         return "odd"

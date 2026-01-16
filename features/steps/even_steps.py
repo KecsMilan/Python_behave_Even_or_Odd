@@ -5,31 +5,16 @@ import math
 
 
 # TODO: Implementáld a Given step-et
-@given('the number is 4')
-def step_given_number(context):
-    context.num = 4
+@given('the number is {number}')
+def step_given_number(context, number):
+    context.number = int(number)
 
-@given('the number is 3')
-def step_given_number(context):
-    context.num = 3
-
-@given('the number is 0')
-def step_given_number(context):
-    context.num = 0
-
-@given('the number is -4')
-def step_given_number(context):
-    context.num = -abs(4)
-
-@given('the number is -5')
-def step_given_number(context):
-    context.num = -abs(5)
 
 # TODO: Implementáld a When step-et
 # Használd a check_number függvényt a src/number_checker.py fájlból!
 @when('I check the number')
 def step_when_check_number(context):
-    context.answer = check_number(context.num)
+    context.answer = check_number(context.number)
 
 
 # TODO: Implementáld a Then step-et
