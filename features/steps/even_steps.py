@@ -1,5 +1,6 @@
 from behave import given, when, then
 from src.number_checker import check_number
+import math
 # TODO: Importáld a number_checker modult a src mappából
 
 
@@ -7,6 +8,22 @@ from src.number_checker import check_number
 @given('the number is 4')
 def step_given_number(context):
     context.num = 4
+
+@given('the number is 3')
+def step_given_number(context):
+    context.num = 3
+
+@given('the number is 0')
+def step_given_number(context):
+    context.num = 0
+
+@given('the number is -4')
+def step_given_number(context):
+    context.num = -abs(4)
+
+@given('the number is -5')
+def step_given_number(context):
+    context.num = -abs(5)
 
 # TODO: Implementáld a When step-et
 # Használd a check_number függvényt a src/number_checker.py fájlból!
